@@ -10,17 +10,17 @@
           <%= devise_error_messages! %>
           <div class="form-group">
             <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Firstname Surname" %>
+            <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email" %>
           </div>
 
           <div class="form-group">
             <%= f.label :password %>
-            <%= f.email_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+            <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
           </div>
 
           <div class="form-group">
             <%= f.label :password_confirmation %>
-            <%= f.email_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+            <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Password Confirmation" %>
           </div>
 
           <%= f.submit "Sign up", :class=> "btn btn-default btn-success" %>

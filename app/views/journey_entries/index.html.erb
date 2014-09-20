@@ -10,13 +10,28 @@
       <div class="row">
 
         <div class="col-md-10">
-          <h2>This Week</h2>
-          <% current_user.journey_entries.each do |entry| %>
-            <%= debug entry %>
-          <% end%>
 
-          <h2>Historical</h2>
-          <p>Blah</p>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">This weeks journeys</h3>
+            </div>
+            <div class="panel-body">
+              <% current_user.journey_entries.each do |entry| %>
+                <%= debug entry %>
+              <% end%>
+            </div>
+          </div>
+      
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Historical Journeys</h3>
+            </div>
+            <div class="panel-body">
+              <p>Blah</p>
+            </div>
+          </div>
+
         </div>
 
         <div class="col-md-2">
