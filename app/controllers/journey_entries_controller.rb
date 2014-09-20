@@ -22,6 +22,8 @@ class JourneyEntriesController < ApplicationController
   private
 
   def journey_entry_params
-    params.require(:journey_entry).permit(:start_postcode, :end_postcode, :transport_id)
+    params.require(:journey_entry).permit(
+      :start_postcode, :end_postcode, :journey_date, :transport_id
+    )
   end
 end

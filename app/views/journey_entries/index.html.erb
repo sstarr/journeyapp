@@ -62,7 +62,7 @@
                 </thead>
                 <tbody>
                   <%= content_tag_for(:tr, @historical_journies) do |journey| %>
-                    <td><%= journey.date.to_default_s %></td>
+                    <td><%= journey.journey_date.to_default_s %></td>
                     <td><%= journey.start_postcode.upcase %></td>
                     <td><%= journey.end_postcode.upcase %></td>
                     <td><%= journey.distance %></td>
