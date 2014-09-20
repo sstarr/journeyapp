@@ -2,6 +2,7 @@ class JourneyEntriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @chart = WeeklyEmissionsChart.new
     @journies_this_week = current_user.journey_entries.this_week
     @historical_journies = current_user.journey_entries.before_this_week
   end
