@@ -18,6 +18,10 @@
     <%= f.text_field :end_postcode %>
   </p>
   <p>
+    <%= f.label :transport  %>
+    <%= f.select :transport_id, Transport.order("name").map { |s| [s.name, s.id] } %>
+  </p>
+  <p>
     <%= f.submit "Add" %>
   </p>
 <% end %>
