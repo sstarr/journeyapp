@@ -53,12 +53,19 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <% if current_user %>
-          <a href="/" class="logo">jurnyz</a>
-        <% end %>
-
+        <a href="/" class="logo brand">jurnyz</a>
 
         <div class="navbar-collapse collapse">
+
+
+          <ul class="nav navbar-nav">
+            <% if current_user %>
+              <li><a href="/journeys">Journeys</a></li>
+            <% end %>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
         <% if current_user %>
           <%= link_to("Logout", destroy_user_session_path, method: :delete, :class => "btn btn-danger btn-lout-out pull-right") %>
         <% else %>
