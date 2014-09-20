@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :journey_entries
   has_many :journeys
+  has_many :friendships
+  has_many :friends, through: :friendships
 end
