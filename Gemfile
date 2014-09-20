@@ -38,3 +38,5 @@ group :staging, :production do
   gem 'pg'
 end
 
+gem 'google_directions'
+
