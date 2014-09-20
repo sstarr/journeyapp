@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920131009) do
+ActiveRecord::Schema.define(version: 20140920141927) do
 
   create_table "journey_entries", force: true do |t|
     t.string   "start_postcode"
@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 20140920131009) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "co2_per_km"
-    t.float    "ch4_per_km"
-    t.float    "n2o_per_km"
+    t.float    "co2_per_mile"
+    t.float    "ch4_per_mile"
+    t.float    "n2o_per_mile"
   end
 
   create_table "users", force: true do |t|
