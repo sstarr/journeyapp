@@ -4,46 +4,56 @@
   </div>
 </div>
 
-<div class="wrapper turq">
-    <div class="container">
-      <div class="row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-  </div>
-</div>
-
-<div class="wrapper green">
-    <div class="container">
-      <div class="row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-  </div>
-</div>
-
 <div class="wrapper blue">
     <div class="container">
       <div class="row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class='col-md-5 text right'>
+          <p>Enter the data from your journeys</p>
+        </div>
+        <div class='col-md-5 col-md-offset-2 image left'>
+          <i class="fa fa-road"></i>
+        </div>
+      </div>
       </div>
   </div>
 </div>
 
+<div class="wrapper turq">
+    <div class="container">
+      <div class="row">
+        <div class='col-md-5 image right'>
+          <i class="fa fa-line-chart"></i>
+        </div>
+        <div class='col-md-5 col-md-offset-2 text left'>
+          <p>Chart your progress against your friends, neighbors and the local area.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+
 <div class="wrapper purple">
+    <div class="container">
+    <div class="text"><p>Supports multiple transport types</p></div>
+      <div class="row">
+        <div class='col-md-3 image'>
+          <i class="fa fa-bicycle"></i>
+        </div>
+        <div class='col-md-3 image'>
+          <i class="fa fa-car"></i>
+        </div>
+        <div class='col-md-3 image'>
+          <i class="fa fa-plane"></i>
+        </div>
+        <div class='col-md-3 image'>
+          <i class="fa fa-bus"></i>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+<!-- <div class="wrapper green">
     <div class="container">
       <div class="row">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -55,6 +65,8 @@
       </div>
   </div>
 </div>
+ -->
+
 
 <% unless current_user %>
   <%= render "application/login" %>
