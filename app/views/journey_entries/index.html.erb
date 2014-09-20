@@ -29,10 +29,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <%= content_tag_for(:tr, @journies) do |journey| %>
-                    <td><%= journey.date.to_default_s %></td>
-                    <td><%= journey.start_postcode %></td>
-                    <td><%= journey.end_postcode %></td>
+                  <%= content_tag_for(:tr, @journies_this_week) do |journey| %>
+                    <td><%= journey.journey_date.to_default_s %></td>
+                    <td><%= journey.start_postcode.upcase %></td>
+                    <td><%= journey.end_postcode.upcase %></td>
                     <td><%= journey.distance %></td>
                     <td><%= journey.co2.round(2) %></td>
                     <td><%= journey.ch4.round(2) %></td>
@@ -48,7 +48,30 @@
               <h3 class="panel-title">Historical Journeys</h3>
             </div>
             <div class="panel-body">
-              <p>Blah</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Start Postcode</th>
+                    <th>End Postcode</th>
+                    <th>Distance</th>
+                    <th>CO<sub>2</sub></th>
+                    <th>CH<sub>4</sub></th>
+                    <th>N<sub>2</sub>O</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%= content_tag_for(:tr, @historical_journies) do |journey| %>
+                    <td><%= journey.date.to_default_s %></td>
+                    <td><%= journey.start_postcode.upcase %></td>
+                    <td><%= journey.end_postcode.upcase %></td>
+                    <td><%= journey.distance %></td>
+                    <td><%= journey.co2.round(2) %></td>
+                    <td><%= journey.ch4.round(2) %></td>
+                    <td><%= journey.n2o.round(2) %></td>
+                  <% end %>
+                </tbody>
+              </table>
             </div>
           </div>
 

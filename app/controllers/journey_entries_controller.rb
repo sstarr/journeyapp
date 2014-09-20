@@ -2,7 +2,8 @@ class JourneyEntriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @journies = current_user.journey_entries
+    @journies_this_week = current_user.journey_entries.this_week
+    @historical_journies = current_user.journey_entries.before_this_week
   end
 
   def new
