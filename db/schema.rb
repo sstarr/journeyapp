@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920144549) do
+ActiveRecord::Schema.define(version: 20140920151649) do
+
+  create_table "air_quality_readings", force: true do |t|
+    t.string   "guid_id"
+    t.datetime "date"
+    t.string   "sensor_location_name"
+    t.string   "sensor_location_slug"
+    t.string   "sensor_location"
+    t.string   "nox"
+    t.string   "no"
+    t.string   "no2"
+    t.string   "co"
+    t.string   "pm10"
+    t.string   "o3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "friendships", force: true do |t|
     t.integer  "user_id"

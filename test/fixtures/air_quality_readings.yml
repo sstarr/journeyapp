@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  date: 2014-09-20 16:16:50
+  sensor_location_name: MyString
+  sensor_location_slug: MyString
+  sensor_location: MyString
+  nox: MyString
+  'no': MyString
+  no2: MyString
+  co: MyString
+  pm10: MyString
+  o3: MyString
+
+two:
+  id: MyString
+  date: 2014-09-20 16:16:50
+  sensor_location_name: MyString
+  sensor_location_slug: MyString
+  sensor_location: MyString
+  nox: MyString
+  'no': MyString
+  no2: MyString
+  co: MyString
+  pm10: MyString
+  o3: MyString
