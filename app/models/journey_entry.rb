@@ -13,6 +13,10 @@ class JourneyEntry < ActiveRecord::Base
     @distance ||= DistanceCalculator.calculate(start_postcode, end_postcode)
   end
 
+  def date
+    journey_date || created_at.to_date
+  end
+
   private
 
     def calculate_emissions

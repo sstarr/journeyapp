@@ -2,6 +2,7 @@ class JourneyEntriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @journies = current_user.journey_entries
   end
 
   def new

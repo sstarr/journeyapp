@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920142652) do
+ActiveRecord::Schema.define(version: 20140920144549) do
 
   create_table "journey_entries", force: true do |t|
     t.string   "start_postcode"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140920142652) do
     t.float    "co2"
     t.float    "ch4"
     t.float    "n2o"
+    t.date     "journey_date"
   end
 
   add_index "journey_entries", ["transport_id"], name: "index_journey_entries_on_transport_id"
