@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_postcode: MyString
+  start_latitude: MyString
+  start_longitude: MyString
+  end_postcode: MyString
+  end_latitude: MyString
+  end_longitude: MyString
+  transport_id: 
+
+two:
+  start_postcode: MyString
+  start_latitude: MyString
+  start_longitude: MyString
+  end_postcode: MyString
+  end_latitude: MyString
+  end_longitude: MyString
+  transport_id: 

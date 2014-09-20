@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920093038) do
+ActiveRecord::Schema.define(version: 20140920101050) do
+
+  create_table "journey_entries", force: true do |t|
+    t.string   "start_postcode"
+    t.string   "start_latitude"
+    t.string   "start_longitude"
+    t.string   "end_postcode"
+    t.string   "end_latitude"
+    t.string   "end_longitude"
+    t.integer  "transport_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "journey_entries", ["transport_id"], name: "index_journey_entries_on_transport_id"
+
+  create_table "journeys", force: true do |t|
+    t.string   "start_postcode"
+    t.string   "start_latitude"
+    t.string   "start_longitude"
+    t.string   "end_postcode"
+    t.string   "end_latitude"
+    t.string   "end_longitude"
+    t.integer  "transport_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "journeys", ["transport_id"], name: "index_journeys_on_transport_id"
+
+  create_table "transports", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
