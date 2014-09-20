@@ -4,12 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Journey App</title>
+    <title>jurnyz - Do stop pollutin'</title>
     <meta name="description" content="">
     <meta name="description" content="">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- TODO: Place favicon.ico and apple-touch-icon(s) in the root directory, or it not possible, use these meta tags -->
     <!-- 
     <link rel="shortcut icon" href="/favicon.ico">
@@ -55,10 +53,18 @@
             <span class="icon-bar"></span>
           </button>
         </div>
+        <% if current_user %>
+          <a href="/" class="logo">jurnyz</a>
+        <% end %>
+
+
         <div class="navbar-collapse collapse">
+        <% if current_user %>
+          <%= link_to("Logout", destroy_user_session_path, method: :delete, :class => "btn btn-danger btn-lout-out pull-right") %>
+        <% else %>
           <button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#register-box">Register</button>
           <button type="button" class="btn btn-success pull-right btn-login" data-toggle="modal" data-target="#login-box">Login</button>
-          <%= link_to("Logout", destroy_user_session_path, method: :delete, :class => "btn btn-danger btn-lout-out pull-right") %>
+        <% end %>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
