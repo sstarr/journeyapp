@@ -34,9 +34,9 @@
                     <td><%= journey.start_postcode %></td>
                     <td><%= journey.end_postcode %></td>
                     <td><%= journey.distance %></td>
-                    <td><%= journey.co2 %></td>
-                    <td><%= journey.ch4 %></td>
-                    <td><%= journey.n2o %></td>
+                    <td><%= journey.co2.round(2) %></td>
+                    <td><%= journey.ch4.round(2) %></td>
+                    <td><%= journey.n2o.round(2) %></td>
                   <% end %>
                 </tbody>
               </table>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="col-md-2">
-          <%= link_to("Add Journey", journeys_new_path) %>
+          <%= link_to("Add Journey", journeys_new_path, :class => "btn btn-success") %>
         </div>
         
       </div> <!-- eo:row -->

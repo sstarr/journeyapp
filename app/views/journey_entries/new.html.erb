@@ -1,28 +1,51 @@
-<h1>Add Journey</h1>
+<div class="container-fluid dashboard">
+  <div class="row">
+    <div class="col-md-2 sidebar">
+      <%= render "application/sidebar" %>
+    </div>
+    
+    <div class="col-md-10 main">
+      <h1>Add Journey</h1>
 
-<% if @journey_entry.errors.any? %>
-  <ul>
-    <% @journey_entry.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+      <div class="row">
 
-<%= form_for @journey_entry, url: {action: "create"} do |f| %>
-  <p>
-    <%= f.label :start_postcode  %>
-    <%= f.text_field :start_postcode %>
-  </p>
-  <p>
-    <%= f.label :end_postcode  %>
-    <%= f.text_field :end_postcode %>
-  </p>
-  <p>
-    <%= f.label :transport  %>
-    <%= f.select :transport_id, Transport.order("name").map { |s| [s.name, s.id] } %>
-  </p>
-  <p>
-    <%= f.submit "Add" %>
-  </p>
-<% end %>
+        <div class="col-md-12">
 
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+            <% if @journey_entry.errors.any? %>
+              <ul>
+                <% @journey_entry.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            <% end %>
+
+            <%= form_for @journey_entry, url: {action: "create"} do |f| %>
+              <p>
+                <%= f.label :start_postcode  %>
+                <%= f.text_field :start_postcode %>
+              </p>
+              <p>
+                <%= f.label :end_postcode  %>
+                <%= f.text_field :end_postcode %>
+              </p>
+              <p>
+                <%= f.label :transport  %>
+                <%= f.select :transport_id, Transport.order("name").map { |s| [s.name, s.id] } %>
+              </p>
+              <p>
+                <%= f.submit "Add" %>
+              </p>
+            <% end %>
+
+            </div>
+          </div>
+      
+        </div>
+        
+      </div> <!-- eo:row -->
+    </div>
+  </div>
+</div>
