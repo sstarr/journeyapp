@@ -1,0 +1,16 @@
+<h1>Journeys</h1>
+
+<p>
+  <%= link_to("Add Journey", journeys_new_path) %>
+</p>
+
+<h2>This Week</h2>
+
+<% current_user.journey_entries.each do |entry| %>
+  <%= debug entry %>
+<% end%>
+
+<h2>Historical</h2>
+
+<p>Blah</p>
+
