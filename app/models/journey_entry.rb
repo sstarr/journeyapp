@@ -1,3 +1,5 @@
+require 'distance_calculator'
+
 class JourneyEntry < ActiveRecord::Base
   belongs_to :user
   belongs_to :transport
@@ -6,6 +8,10 @@ class JourneyEntry < ActiveRecord::Base
   validates :end_postcode,   presence: true
 
   before_validation :calculate_emissions
+
+  def distance
+    @distance ||= DistanceCalculator.calculate(start_postcode, end_postcode)
+  end
 
   private
 
