@@ -1,0 +1,24 @@
+<h1>Add Journey</h1>
+
+<% if @journey_entry.errors.any? %>
+  <ul>
+    <% @journey_entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @journey_entry, url: {action: "create"} do |f| %>
+  <p>
+    <%= f.label :start_postcode  %>
+    <%= f.text_field :start_postcode %>
+  </p>
+  <p>
+    <%= f.label :end_postcode  %>
+    <%= f.text_field :end_postcode %>
+  </p>
+  <p>
+    <%= f.submit "Add" %>
+  </p>
+<% end %>
+
