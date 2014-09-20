@@ -16,8 +16,8 @@ class JourneyEntry < ActiveRecord::Base
   private
 
     def calculate_emissions
-      self.co2 = distance_in_km * transport.co2_per_km
-      self.ch4 = distance_in_km * transport.ch4_per_km
-      self.n2o = distance_in_km * transport.n2o_per_km
+      self.co2 = distance * transport.co2_per_mile
+      self.ch4 = distance * transport.ch4_per_mile
+      self.n2o = distance * transport.n2o_per_mile
     end
 end
