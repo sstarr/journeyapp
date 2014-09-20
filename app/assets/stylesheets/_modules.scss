@@ -50,7 +50,23 @@
   &.green{background-color: $green;}
   &.blue{background-color: $blue;}
   &.purple{background-color: $purple;}
+
+  .image{
+    font-size: 200px;
+    &.left{text-align:left;}
+    &.right{text-align:right;}
+  }
+  .text{
+    font-size: 40px;
+    text-align: left;
+    &.left{text-align:left;}
+    &.right{text-align:right;}
+  }
+
+
 }
+
+
 
 
 // Dashboard

@@ -16,7 +16,7 @@
               <h3 class="panel-title">Your Contribution to Bath's Pollution</h3>
             </div>
             <div class="panel-body">
-            <div id="chart" data-bath="7.0,6.9,9.5,14.5,18.2,21.5,25.2" data-you="<%= (Date.today.beginning_of_week..Date.today.end_of_week).to_a.map { |date| current_user.journey_entries.where(journey_date: date).map { |j| j.n2o }.inject{|sum,x| sum + x } || 0.0 }.to_s.gsub(/(\[|\])/, '') %>"></div>
+            <div id="chart" data-bath="<%= @chart.bath %>" data-you="<%= @chart.you(current_user) %>"></div>
             </div>
           </div>
 

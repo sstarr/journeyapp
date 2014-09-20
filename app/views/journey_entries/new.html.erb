@@ -6,11 +6,8 @@
     
     <div class="col-md-10 main">
       <h1>Add Journey</h1>
-
       <div class="row">
-
         <div class="col-md-12">
-
           <div class="panel panel-default">
             <div class="panel-body">
 
@@ -23,25 +20,27 @@
               <% end %>
 
               <%= form_for @journey_entry, url: { action: "create" } do |f| %>
-                <p>
+
+                <div class="form-group">
                   <%= f.label :start_postcode %>
-                  <%= f.text_field :start_postcode %>
-                </p>
-                <p>
+                  <%= f.text_field :start_postcode, :class => "form-control", :placeholder => "Start Postcode" %>
+                </div>
+
+                <div class="form-group">
                   <%= f.label :end_postcode %>
-                  <%= f.text_field :end_postcode %>
-                </p>
-                <p>
+                  <%= f.text_field :end_postcode, :class => "form-control", :placeholder => "End Postcode" %>
+                </div>
+
+                <div class="form-group">
                   <%= f.label :journey_date %>
-                  <%= f.text_field :journey_date, class: 'datepicker' %>
-                </p>
-                <p>
-                  <%= f.label :transport  %>
-                  <%= f.select :transport_id, Transport.order("name").map { |s| [s.name, s.id] } %>
-                </p>
-                <p>
-                  <%= f.submit "Add" %>
-                </p>
+                  <%= f.text_field :journey_date, :class => "form-control datepicker", :placeholder => "Journey Date" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :transport %>
+                  <%= f.select :transport_id, Transport.order("name").map { |s| [s.name, s.id] }, :class => "form-control" %>
+                </div>
+                <%= f.submit "Add Journey", :class => "btn btn-success"%>
               <% end %>
 
             </div>
