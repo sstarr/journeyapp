@@ -1,0 +1,41 @@
+// Settings
+// Basic site settings. Variables, mixins, placeholders etc 
+
+// Vars
+// ------------------------------------------------------------
+$light: #fff; //White/grey
+$dark: #1e1e1e; //Nearly Black
+$close: #ff0101; //Red
+$contrast: #bebebe; //Light Grey
+
+// Colours
+$turq: #1abc9c;
+$green: #2ecc71;
+$blue: #3498db;
+$purple: #9b59b6;
+$dashboard-bg: #34495e;
+
+
+// Mixins
+// ------------------------------------------------------------
+
+// Placeholders
+// ------------------------------------------------------------
+
+%clearfix {
+   &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
+
+%image-replacement {
+   overflow: hidden;
+   text-align: left;
+   display: block;
+   line-height:0;
+   text-indent: -1000em;
+}

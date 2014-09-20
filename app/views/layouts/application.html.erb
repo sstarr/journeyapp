@@ -1,16 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Journeyapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html class="no-js">
 
-<%= link_to("Logout", destroy_user_session_path, method: :delete) %>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Journey App</title>
+    <meta name="description" content="">
+    <meta name="description" content="">
 
-<%= yield %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</body>
+    <!-- TODO: Place favicon.ico and apple-touch-icon(s) in the root directory, or it not possible, use these meta tags -->
+    <!-- 
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+    -->
+    
+    <!-- Social Meta Tags -->
+    <link rel="author" href="https://plus.google.com/#"/> <!-- TODO: Fill in G+ Personal Account Details -->
+    <link rel="publisher" href="https://plus.google.com/#"/> <!-- TODO: Fill in G+ Business Account Details -->
+
+    <meta property="og:title" content="#"/> <!-- TODO: Fill in OG Title -->
+    <meta property="og:type" content="#"/> <!-- TODO: Fill in OG Type -->
+    <meta property="og:image" content="#"/> <!-- TODO: Fill in OG Image -->
+    <meta property="og:URL" content="#"/> <!-- TODO: Fill in OG URL (Should be current page URL) -->
+    <meta property="og:description" content="#"/> <!-- TODO: Fill in OG Description -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="#"> <!-- TODO: Fill in Card URL (Should be current page URL) -->
+    <meta name="twitter:creator" content="#"> <!-- TODO: Fill in Card Creator (Twitter Account)  -->
+    <meta name="twitter:title" content="#"> <!-- TODO: Fill in Card Title  -->
+    <meta name="twitter:description" content="#"> <!-- TODO: Fill in Card Description  -->
+    <meta name="twitter:image" content="#"> <!-- TODO: Fill in Card Image  -->
+
+    <%= csrf_meta_tags %>
+
+    <!-- Styles -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#register-box">Register</button>
+          <button type="button" class="btn btn-success pull-right btn-login" data-toggle="modal" data-target="#login-box">Login</button>
+          <%= link_to("Logout", destroy_user_session_path, method: :delete, :class => "btn btn-danger btn-lout-out pull-right") %>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+      <%= yield %>
+    <footer>
+      <div class="container">
+        <p>&copy; jurnyz 2014 - A Jordan, Simon and Liam Production</p>
+      </div>
+    </footer>
+
+    <script src="/assets/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <%= javascript_include_tag 'application' %>
+  </body>
 </html>

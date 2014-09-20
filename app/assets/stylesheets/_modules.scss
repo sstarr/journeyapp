@@ -1,0 +1,60 @@
+// Modules
+// Site wide modules. Components, sub navigation etc.
+
+
+@import "settings"; // Variables, Mixins, Placeholders etc
+
+
+// Nav Bar
+.navbar{
+  .btn{
+    position: relative;
+    top: 7px;
+    &.btn-login {margin-right: 20px;}
+  }
+}
+
+
+//Banner
+.banner{
+  background: url(/assets/header.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  .container{
+    height: 100%;
+    h1{
+      text-align: center;
+      margin-top: 200px;
+      color: $light;
+      font-size: 80px;
+    }
+  }
+}
+
+// Wrapper
+.wrapper {
+  padding: 40px 0;
+  color: $light;
+  &.turq{background-color: $turq;}
+  &.green{background-color: $green;}
+  &.blue{background-color: $blue;}
+  &.purple{background-color: $purple;}
+}
+
+
+// Dashboard
+.container-fluid.dashboard {
+  background-color: $dashboard-bg;
+  color: $light;
+  a{
+    color: $turq;
+    &.btn{color: $light;}
+  }
+
+}
+
+
+// Footer
+footer{
+  padding: 20px 0 10px 0;
+}
