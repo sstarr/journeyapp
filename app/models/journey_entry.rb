@@ -1,8 +1,4 @@
-require 'geocode_journey_postcodes'
-
 class JourneyEntry < ActiveRecord::Base
-  include GeocodeJourneyPostcodes
-
   belongs_to :user
   belongs_to :transport
 
