@@ -5,3 +5,4 @@ class JourneyEntry < ActiveRecord::Base
   validates :start_postcode, presence: true
   validates :end_postcode,   presence: true
 end
+
